@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class IntentoryTrackerApplication {
+public class InventoryTrackerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(IntentoryTrackerApplication.class, args);
+		SpringApplication.run(InventoryTrackerApplication.class, args);
 	}
 
 }

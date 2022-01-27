@@ -1,10 +1,10 @@
-package com.gomez.intentory_tracker;
+package com.gomez.inventory_tracker;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class IntentoryTrackerApplicationTests {
+class InventoryTrackerApplicationTests {
 
 	@Test
 	void contextLoads() {
