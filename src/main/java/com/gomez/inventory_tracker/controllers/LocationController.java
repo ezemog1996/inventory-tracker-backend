@@ -1,7 +1,7 @@
 package com.gomez.inventory_tracker.controllers;
 
-import com.gomez.inventory_tracker.models.Item;
-import com.gomez.inventory_tracker.services.ItemService;
+import com.gomez.inventory_tracker.models.Location;
+import com.gomez.inventory_tracker.services.LocationService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -13,20 +13,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/items")
-@CrossOrigin(origins = "*")
-public class ItemController {
-    
-    private ItemService is;
+@RequestMapping("/locations")
+@CrossOrigin("*")
+public class LocationController {
+
+    private LocationService ls;
 
     @Autowired
-    public ItemController(ItemService is) {
+    public LocationController(LocationService ls) {
         super();
-        this.is = is;
+        this.ls = ls;
     }
-
+    
     @PostMapping("/add")
-    public ResponseEntity<Item> addItem(@RequestBody Item item) {
-        return new ResponseEntity<>(is.addItem(item), HttpStatus.CREATED);
+    public ResponseEntity<Location> addLocation(@RequestBody Location location) {
+        return new ResponseEntity<>(ls.addLocation(location), HttpStatus.CREATED);
     }
 }

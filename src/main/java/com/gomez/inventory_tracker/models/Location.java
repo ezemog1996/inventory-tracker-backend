@@ -17,20 +17,22 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "items")
-public class Item {
+@Table(name = "locations")
+public class Location {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false)
-    private int itemId;
+    private int locationId;
     @Column(nullable = false)
-    private String itemName;
-    @Column(nullable = false)
-    private String itemDescription;
-    @ManyToOne @JoinColumn(nullable = false)
-    private Category category;
-    @ManyToOne @JoinColumn(nullable = false)
-    private Location location;
+    private String locationName;
+    @Column
+    private String locationAddress;
+    @Column
+    private String locationCity;
+    @Column
+    private String locationState;
+    @Column
+    private String locationZip;
     @ManyToOne @JoinColumn(nullable = false)
     private Business business;
 }

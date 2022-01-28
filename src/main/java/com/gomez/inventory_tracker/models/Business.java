@@ -5,8 +5,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -17,20 +15,20 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "items")
-public class Item {
+@Table(name = "businesses")
+public class Business {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false)
-    private int itemId;
+    private int businessId;
     @Column(nullable = false)
-    private String itemName;
+    private String businessName;
     @Column(nullable = false)
-    private String itemDescription;
-    @ManyToOne @JoinColumn(nullable = false)
-    private Category category;
-    @ManyToOne @JoinColumn(nullable = false)
-    private Location location;
-    @ManyToOne @JoinColumn(nullable = false)
-    private Business business;
+    private String businessAddress;
+    @Column(nullable = false)
+    private String businessCity;
+    @Column(nullable = false)
+    private String businessState;
+    @Column(nullable = false)
+    private String businessZip;
 }
