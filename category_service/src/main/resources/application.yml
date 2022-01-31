@@ -1,0 +1,14 @@
+spring:
+  jpa:
+    show-sql: false
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+  profiles:
+    active:
+    - "@profileActive@"
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

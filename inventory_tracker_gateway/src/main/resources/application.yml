@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    gateway:
+        routes:
+        - id: business_service
+          uri: http://localhost:8081
+          predicates:
+          - Path=/businesses
+          filters:
+          - name: CircuitBreaker
+            args:
+              name: fallback
+              fallbackUri: forward:/fallback
