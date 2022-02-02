@@ -2,7 +2,7 @@ server:
   port: 8081
 spring:
   application:
-    name: business_service
+    name: BUSINESS-SERVICE
   jpa:
     show-sql: false
   jackson:
