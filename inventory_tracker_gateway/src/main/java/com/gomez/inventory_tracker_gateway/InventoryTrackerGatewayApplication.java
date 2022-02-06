@@ -28,7 +28,7 @@ public class InventoryTrackerGatewayApplication {
 				.slowCallDurationThreshold(Duration.ofMillis(200))
            		.slowCallRateThreshold(50.0F)
 				.build())
-			.timeLimiterConfig(TimeLimiterConfig.custom().timeoutDuration(Duration.ofMillis(200)).build()).build());
+			.timeLimiterConfig(TimeLimiterConfig.custom().timeoutDuration(Duration.ofMillis(500)).build()).build());
 	}
 
 }
