@@ -3,7 +3,7 @@ package com.gomez.category_service.controllers;
 import java.util.List;
 
 import com.gomez.category_service.consumers.BusinessConsumer;
-import com.gomez.category_service.dtos.Business;
+import com.gomez.category_service.models.Business;
 import com.gomez.category_service.models.Category;
 import com.gomez.category_service.services.CategoryService;
 

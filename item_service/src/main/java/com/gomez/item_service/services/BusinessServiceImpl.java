@@ -2,7 +2,7 @@ package com.gomez.item_service.services;
 
 import java.util.List;
 
-import com.gomez.item_service.dtos.Business;
+import com.gomez.item_service.models.Business;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

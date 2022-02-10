@@ -1,6 +1,6 @@
 package com.gomez.business_service.services;
 
-import com.gomez.business_service.dtos.Category;
+import com.gomez.business_service.models.Category;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

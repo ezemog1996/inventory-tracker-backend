@@ -38,3 +38,21 @@ spring:
             args:
               name: fallback
               fallbackUri: forward:/fallback
+        - id: user_service
+          uri: http://localhost:8085
+          predicates:
+          - Path=/users/**
+          filters:
+          - name: CircuitBreaker
+            args:
+              name: fallback
+              fallbackUri: forward:/fallback
+        - id: auth_service
+          uri: http://localhost:8086
+          predicates:
+          - Path=/auth/**
+          filters:
+          - name: CircuitBreaker
+            args:
+              name: fallback
+              fallbackUri: forward:/fallback

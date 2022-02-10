@@ -1,6 +1,6 @@
 package com.gomez.item_service.services;
 
-import com.gomez.item_service.dtos.Location;
+import com.gomez.item_service.models.Location;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

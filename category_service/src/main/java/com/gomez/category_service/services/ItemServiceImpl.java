@@ -1,6 +1,6 @@
 package com.gomez.category_service.services;
 
-import com.gomez.category_service.dtos.Item;
+import com.gomez.category_service.models.Item;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
