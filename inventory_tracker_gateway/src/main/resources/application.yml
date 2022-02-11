@@ -1,4 +1,11 @@
 spring:
+  security:
+    oauth2:
+      resourceserver:
+        id: ${INVENTORY_TRACKER_AUDIENCE}
+        jwt:
+          jwk-set-uri: ${INVENTORY_TRACKER_AUTHORITY}/.well-known/jwks.json
+          issuer-uri: ${INVENTORY_TRACKER_AUTHORITY}
   cloud:
     gateway:
         routes:
