@@ -1,4 +1,4 @@
-package com.gomez.auth_service.config;
+package com.gomez.auth_service.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

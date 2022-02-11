@@ -11,6 +11,13 @@ spring:
   profiles:
     active:
     - "@profileActive@"
+  security:
+    auth0:
+      audience: https://inventorytracker.com
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://dev-hd772wgr.us.auth0.com/
 eureka:
   client:
     serviceUrl:
