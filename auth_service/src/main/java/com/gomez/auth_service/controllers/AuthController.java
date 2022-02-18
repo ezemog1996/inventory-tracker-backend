@@ -2,7 +2,8 @@ package com.gomez.auth_service.controllers;
 
 import java.net.URISyntaxException;
 
-import com.gomez.auth_service.models.User;
+import com.gomez.auth_service.dtos.Auth0ResponseObj;
+import com.gomez.auth_service.dtos.ClientAuthObj;
 import com.gomez.auth_service.services.AuthService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,8 +28,8 @@ public class AuthController {
     }
     
     @PostMapping
-    public ResponseEntity<User> loginUser(@RequestBody User user) throws URISyntaxException {
-        return new ResponseEntity<User>(as.loginUser(user), HttpStatus.OK);
+    public ResponseEntity<Auth0ResponseObj> loginUser(@RequestBody ClientAuthObj clientAuthObj) throws URISyntaxException {
+        return new ResponseEntity<Auth0ResponseObj>(as.loginUser(clientAuthObj), HttpStatus.OK);
     }
 
     @GetMapping("/authTest")

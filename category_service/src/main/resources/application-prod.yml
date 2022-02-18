@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: ${P2_DB_URL}
-    username: ${P2_DB_USER}
-    password: ${P2_DB_PASS}
+    url: ${CATEGORY_DB_URL}
+    username: ${CATEGORY_DB_USER}
+    password: ${CATEGORY_DB_PASS}
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:

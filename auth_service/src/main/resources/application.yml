@@ -18,7 +18,7 @@ spring:
   #         issuer-uri: ${INVENTORY_TRACKER_AUTHORITY}
 auth0:
   audience: ${INVENTORY_TRACKER_AUDIENCE}
-  new-token-uri: ${INVENTORY_TRACKER_AUTHORITY}/oauth/token
+  new-token-uri: ${INVENTORY_TRACKER_AUTHORITY}oauth/token
   client-id: ${INVENTORY_TRACKER_CLIENT_ID}
   client-secret: ${INVENTORY_TRACKER_CLIENT_SECRET}
   grant-type: ${INVENTORY_TRACKER_GRANT_TYPE}

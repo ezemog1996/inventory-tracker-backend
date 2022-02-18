@@ -7,10 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Auth0RequestObj {
-    private String client_id;
-    private String client_secret;
-    private String grant_type;
+public class ClientAuthObj {
     private String code;
     private String redirect_uri;
 }

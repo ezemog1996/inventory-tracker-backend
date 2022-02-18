@@ -21,7 +21,7 @@ public class SecurityConfig {
     @Bean
     public SecurityWebFilterChain securityWebFilterChain(ServerHttpSecurity http) {
         http.authorizeExchange()
-            .pathMatchers("/users").permitAll()
+            .pathMatchers(HttpMethod.POST, "/users").permitAll()
             .pathMatchers(HttpMethod.POST, "/auth").permitAll()
             .pathMatchers(HttpMethod.GET, "/auth/authTest").authenticated()
             .pathMatchers("/sup").hasAuthority("SCOPE_read:messages")
