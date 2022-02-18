@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: ${BUSINESS_DB_URL}
+    username: ${BUSINESS_DB_USER}
+    password: ${BUSINESS_DB_PASS}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    database-platform: org.hibernate.dialect.PostgreSQLDialect

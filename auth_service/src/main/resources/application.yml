@@ -1,0 +1,35 @@
+server:
+  port: 8086
+spring:
+  application:
+    name: AUTH-SERVICE
+  jpa:
+    show-sql: false
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+  profiles:
+    active:
+    - "@profileActive@"
+  # security:
+  #   oauth2:
+  #     resourceserver:
+  #       jwt:
+  #         issuer-uri: ${INVENTORY_TRACKER_AUTHORITY}
+auth0:
+  audience: ${INVENTORY_TRACKER_AUDIENCE}
+  new-token-uri: ${INVENTORY_TRACKER_AUTHORITY}oauth/token
+  client-id: ${INVENTORY_TRACKER_CLIENT_ID}
+  client-secret: ${INVENTORY_TRACKER_CLIENT_SECRET}
+  grant-type: ${INVENTORY_TRACKER_GRANT_TYPE}
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
